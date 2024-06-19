@@ -1,0 +1,126 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: "";
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+
+}
+
+main {
+  margin-top: 85px;
+}
+
+.container {
+  max-width: 370px;
+  height: 330px;
+  margin: 0 auto;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  box-shadow: 0px 8px 15px 0px #1414141F;
+  padding: 10px 0;
+}
+
+.checkbox-label {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  height: 23px;
+  width: 23px;
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+  background: #fff url(./public/hover-tick.png) center/1000% no-repeat;
+}
+
+.checkbox-label:hover .custom-checkbox {
+  background: url(./public/hover-tick.png) center/60% no-repeat;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+}
+
+.checkbox-label input:checked+.custom-checkbox {
+  background: #2469f6 url(./public/tick.png) center/60% no-repeat;
+  border-radius: 6px;
+  border: none;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.checkbox-label:hover input:checked+.custom-checkbox {
+  background: #2469f6 url(./public/tick.png) center/60% no-repeat;
+  border-radius: 6px;
+  border: none;
+}
+
+.page-checkbox {
+  height: 18px;
+  width: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkbox-label-text {
+  font-size: 16px;
+}
+
+.horizontal-line-wrapper {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontal-line {
+  width: 340px;
+  border-top-width: 0.7px;
+  border-color: #CDCDCD;
+}
+
+.btn-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.btn {
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #ffce22;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #FFD84D;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
